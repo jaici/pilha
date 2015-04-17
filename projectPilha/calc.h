@@ -1,7 +1,14 @@
 #ifndef CALC_H_INCLUDED
 #define CALC_H_INCLUDED
+/**Inclui biblioteca de pilha**/
+#include "pilha.h";
 
 typedef struct calc Calc;
+
+struct calc{
+    char format[21]; /**Formato para impressão**/
+    Pilha* op;      /**Pilha de operandos**/
+};
 /* funções exportadas */
 Calc* cria_calc (char* f);
 void operando (Calc* c, float v);
